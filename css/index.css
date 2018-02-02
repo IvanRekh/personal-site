@@ -1,0 +1,219 @@
+html {
+    max-width: 900px;
+    margin: 0 auto;
+    background-image: url("../img/fon.jpg");
+    background-position: bottom center;
+}
+
+header {
+    margin-top: 3px;
+}
+  .flex-conteiner {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contact {
+    width: 100%;
+    float: left;
+    
+  }
+  .button {
+    float: right;
+    background-color: white;
+    vertical-align: middle;
+    padding: 5px 15px;
+    font-size: 17px;
+    text-align: center;
+    text-indent: inherit;
+    transition: all 0.5s;
+    margin-right: 7px;
+    transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4;
+    color: white;
+    position: relative;
+    display: inline;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+  .menu {
+    display: none;
+  background-color: #c7d5ed;
+  float: right;
+  margin-top: 5px;
+}
+  .button:hover .menu {
+    display: inline-block;
+    
+  }
+  .button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  .button:hover {
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  .button span:after {
+    content: url(../img/tel.png);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+  .button:hover span {
+    padding-right: 25px;
+}
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+  .menu-contact {
+    list-style-type: none;
+    background-color: #e2d0a3;
+    padding: 5px;
+    border: double;
+    margin: 0;
+} 
+  .logo {
+    width: 100%;
+    text-align: center;
+}
+  .logo img{
+    width: 170px;
+  }
+  .mySlides img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+@media only screen and (min-width: 500px) {
+  body {
+    text-align: center;
+  }
+  .flex-conteiner {
+    display: flex;
+    flex-direction: row;
+  }
+  .flex-conteiner>div {
+    width: 100%;
+    margin: 1px;
+    text-align: center;
+    line-height: inherit;
+  }
+  .flex-conteiner, .contact {
+    margin: 7px;
+    flex-grow: 1;
+  }
+  .flex-conteiner, .logo {
+    flex-grow: 2;
+  }
+  .logo {
+    width: 50%;
+    text-align: center;
+    float: left;
+  }
+  .button {
+    font-size: 1.2rem;    
+  }
+  .contact {
+    width: 50%;
+    text-align: right;
+    padding-bottom: 5%;
+    float: right;
+    margin-top: 3px;
+  }
+  .mySlides img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 3%;
+  }
+}
+
+div .mySlides {
+    display: none;
+}
+.slaideshow-conteiner {
+  padding: 0;
+   max-width: 100%;
+   position: relative;
+   margin: auto;
+}
+.dots {
+  text-align: center;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px;
+  }
+}
